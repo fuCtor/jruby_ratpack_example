@@ -16,4 +16,5 @@ end
 group :test do
   gem 'rspec'
   gem 'simplecov', require: false
+  gem 'codeclimate-test-reporter', require: false
 end
