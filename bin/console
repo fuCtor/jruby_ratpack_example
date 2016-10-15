@@ -1,0 +1,3 @@
+#!env sh
+
+bundle exec pry -r ./config/bootstrap

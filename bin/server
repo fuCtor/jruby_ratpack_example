@@ -1,0 +1,4 @@
+#!env jruby
+
+require_relative '../config/bootstrap'
+UrlExpander::Server.run

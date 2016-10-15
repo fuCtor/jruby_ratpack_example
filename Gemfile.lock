@@ -1,0 +1,100 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (4.2.5)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    coderay (1.1.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
+    dotenv (2.0.1)
+    equalizer (0.0.11)
+    ffi (1.9.10-java)
+    i18n (0.7.0)
+    ice_nine (0.11.2)
+    jar-dependencies (0.3.2)
+    jbundler (0.9.2)
+      bundler (~> 1.5)
+      jar-dependencies (~> 0.2)
+      maven-tools (~> 1.0.10)
+      ruby-maven (~> 3.3, >= 3.3.3)
+    jrjackson (0.3.8)
+    jruby-openssl (0.9.15-java)
+    json (1.8.3)
+    json (1.8.3-java)
+    maven-tools (1.0.13)
+      virtus (~> 1.0)
+    method_source (0.8.2)
+    minitest (5.8.4)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry (0.10.3-java)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+      spoon (~> 0.0)
+    rake (11.1.1)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    ruby-maven (3.3.10)
+      ruby-maven-libs (~> 3.3.1)
+    ruby-maven-libs (3.3.3)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
+    slop (3.6.0)
+    spoon (0.0.4)
+      ffi
+    thread_safe (0.3.5)
+    thread_safe (0.3.5-java)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  java
+  ruby
+
+DEPENDENCIES
+  activesupport (= 4.2.5)
+  dotenv
+  jbundler (= 0.9.2)
+  jrjackson
+  jruby-openssl
+  pry
+  rake
+  rspec
+  simplecov
+
+BUNDLED WITH
+   1.12.5
