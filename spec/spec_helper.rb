@@ -4,10 +4,7 @@ ENV['RACK_ENV']        = 'test'
 
 require_relative '../config/bootstrap'
 
-if ENV['TRAVIS_CI']
-  require 'codeclimate-test-reporter'
-  CodeClimate::TestReporter.start
-else
+unless ENV['TRAVIS_CI']
   require 'simplecov'
 
   SimpleCov.start do
