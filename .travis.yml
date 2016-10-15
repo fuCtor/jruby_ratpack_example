@@ -1,0 +1,9 @@
+language: ruby
+cache: bundler
+bundler_args: "--binstubs --without documentation --path ../bundle --retry=3 --jobs=3"
+before_script: bundle exec jbundler install
+script: bundle exec rspec spec --require spec_helper
+
+addons:
+  code_climate:
+    repo_token: 37f5ce3b968d143a1fb19e75f504204d5588b6724882b208a910b2ebcf5cb909

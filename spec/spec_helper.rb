@@ -3,13 +3,21 @@ require 'rubygems'
 ENV['RACK_ENV']        = 'test'
 
 require_relative '../config/bootstrap'
-require 'simplecov'
 
-SimpleCov.start do
-  add_filter '/spec/'
-  add_filter '/.bundle/'
-  add_filter '/.jbundler/'
+if ENV['TRAVIS_CI']
+  require 'codeclimate-test-reporter'
+  CodeClimate::TestReporter.start
+else
+  require 'simplecov'
+
+  SimpleCov.start do
+    add_filter '/spec/'
+    add_filter '/.bundle/'
+    add_filter '/.jbundler/'
+  end
 end
+
+
 
 RSpec.configure do |config|
   # Mock Framework
