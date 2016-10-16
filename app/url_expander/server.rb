@@ -15,6 +15,7 @@ java_import 'ratpack.server.BaseDir'
 java_import 'ratpack.guice.Guice'
 java_import 'ratpack.dropwizard.metrics.DropwizardMetricsConfig'
 java_import 'ratpack.dropwizard.metrics.DropwizardMetricsModule'
+java_import 'ratpack.dropwizard.metrics.MetricsWebsocketBroadcastHandler'
 
 module UrlExpander
   Server = Struct.new(:host, :port) do
@@ -30,10 +31,17 @@ module UrlExpander
                      g.module(DropwizardMetricsModule.new)
                    })
 
-        s.handlers do |c|
-          c.get 'status',  Handler::Status
-          c.path 'expand', Handler::Expander
-          c.all            Handler::Default
+        s.handlers do |chain|
+
+          chain.files do |f|
+            f.dir("public").indexFiles("index.html")
+          end
+
+          chain.get("metrics-report", MetricsWebsocketBroadcastHandler.new)
+
+          chain.get 'status',  Handler::Status
+          chain.path 'expand', Handler::Expander
+          chain.all            Handler::Default
         end
       end
       @server.start

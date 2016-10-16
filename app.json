@@ -1,8 +1,5 @@
 {
   "name": "Example Ratpack app",
-  "description": "A JRuby based Ratpack app",
-  "scripts": {
-    "postdeploy": "bundle exec jbundle install"
-  }
+  "description": "A JRuby based Ratpack app"
 }
 

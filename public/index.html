@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Url expander</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="https://use.fontawesome.com/22d2874531.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body class="container">
+
+<div id="result_tpl" class="hidden">
+    <div class="col-md-12">
+    <span class="start"></span>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+        <span class="finish"></span>
+    </div>
+</div>
+
+
+<h1>
+    Url expander
+    <a href="/metrics.html" class="btn btn-default">Metrics</a>
+</h1>
+
+<form>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <input id="url" type="text" class="form-control">
+
+                <div class="input-group-btn">
+                    <button id="sendButton" class="btn btn-default" type="button">Expand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<row id="results">
+
+</row>
+
+<script src="js/app.js"></script>
+</body>
+</html>
