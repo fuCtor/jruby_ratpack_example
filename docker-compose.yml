@@ -1,5 +1,4 @@
 app:
-#  build: .
   image: url_expander
   command: bin/run.sh
   ports:
