@@ -1,0 +1,9 @@
+app:
+#  build: .
+  image: url_expander
+  command: bin/run.sh
+  ports:
+    - "3000:3000"
+  environment:
+    - PORT=3000
+    - RACK_ENV=production
