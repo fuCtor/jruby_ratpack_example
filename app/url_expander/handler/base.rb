@@ -20,12 +20,12 @@ module UrlExpander
         params['remote_ip'] = ctx.getRequest.getHeaders.get('X-Forwarded-For')
 
         self.new(data, params, ctx).execute.then do |result|
-          ctx.getResponse.tap do |http_response|
+          ctx.getResponse.tap do |response|
             case result
               when Hash
-                http_response.send('application/json;charset=UTF-8', JrJackson::Json.dump(result))
+                response.send('application/json;charset=UTF-8', JrJackson::Json.dump(result))
               else
-                http_response.status(200).send
+                response.status(200).send
             end
           end
         end
